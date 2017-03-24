@@ -2,6 +2,7 @@ $(function() {
 
   var startEndButtons = function(clickedButton, hide1, show1, show2) {
     $(clickedButton).click(function() {
+      $("#heading").show();
       $(hide1).hide();
       $(show1).show();
       $(show2).show();
@@ -46,6 +47,8 @@ $(function() {
     var value3 = parseInt($("input[name=question3]:checked").val());
 
     var resultValue = value1 + value2 + value3;
+
+    $("#heading").hide();
 
     if (resultValue > 6) {
       resetResults();

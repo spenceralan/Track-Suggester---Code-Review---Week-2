@@ -15,6 +15,14 @@ li span {
   text-align: center;
 }
 
+.centerButton > img {
+  margin: 20px;
+}
+
+#resultNaN > .centerButton > img {
+  width: 60%;
+}
+
 /*initially hide divs*/
 
 #questions, #question1, #question2, #question3 {
