@@ -14,3 +14,9 @@ li span {
 .centerButton {
   text-align: center;
 }
+
+/*initially hide divs*/
+
+#questions, #question1, #question2, #question3 {
+  display: none;
+}

@@ -21,7 +21,6 @@
         <p>
           Disclaimer: This quiz is not comprehensive and results can vary. Please consult a professional before making any life changing decisions.
         </p>
-        <hr>
       </div>
 
       <div class="row centerButton" id="startQuiz">
@@ -29,17 +28,47 @@
       </div>
 
       <div class="row" id="questions">
-
-        <h2>Question Test</h2>
-        <ul>
-          <li><input type="radio" name="response" value="1"><span>Test</span></input></li>
-          <li><input type="radio" name="response" value="2"><span>Test</span></input></li>
-          <li><input type="radio" name="response" value="3"><span>Test</span></input></li>
-        </ul>
         <hr>
-        <div class="centerButton">
-          <button id="submitButton" class="btn btn-danger" type="button" name="submit">Submit</button>
+
+        <div id="question1">
+          <h2>Test Question 1</h2>
+          <ul>
+            <li><input type="radio" name="question1" value="1"><span>Test</span></input></li>
+            <li><input type="radio" name="question1" value="2"><span>Test</span></input></li>
+            <li><input type="radio" name="question1" value="3"><span>Test</span></input></li>
+          </ul>
+          <div class="centerButton">
+            <button id="nextButton1" class="btn btn-success" type="button" name="next">Next</button>
+          </div>
         </div>
+
+        <div id="question2">
+          <h2>Test Question 2</h2>
+          <ul>
+            <li><input type="radio" name="question2" value="1"><span>Test</span></input></li>
+            <li><input type="radio" name="question2" value="2"><span>Test</span></input></li>
+            <li><input type="radio" name="question2" value="3"><span>Test</span></input></li>
+          </ul>
+          <div class="centerButton">
+            <button id="backButton1" class="btn btn-success" type="button" name="submit">Back</button>
+            <button id="nextButton2" class="btn btn-success" type="button" name="next">Next</button>
+          </div>
+        </div>
+
+        <div id="question3">
+          <h2>Test Question 3</h2>
+          <ul>
+            <li><input type="radio" name="question3" value="1"><span>Test</span></input></li>
+            <li><input type="radio" name="question3" value="2"><span>Test</span></input></li>
+            <li><input type="radio" name="question3" value="3"><span>Test</span></input></li>
+          </ul>
+          <div class="centerButton">
+            <button id="backButton2" class="btn btn-success" type="button" name="submit">Back</button>
+            <button id="submitButton" class="btn btn-danger" type="button" name="submit">Submit</button>
+          </div>
+        </div>
+
+        <hr>
       </div>
 
       <div class="row" id="results">
