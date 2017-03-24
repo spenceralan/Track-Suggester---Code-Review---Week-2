@@ -44,14 +44,20 @@ $(function() {
     var userName = $("#userName").val();
     var userEmail = $("#userEmail").val();
 
+    // email regex from http://emailregex.com/
+
     if (userName === "" || userEmail === "") {
+      $(".warnMessage").text("Please make sure all fields are filled out.");
       $("#warning").show();
-    } else {
+    } else if (userEmail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
       $("#warning").hide();
       $("#heading").show();
       $("#startQuiz").hide();
       $("#questions").show();
       $("#question1").show();
+    } else {
+      $(".warnMessage").text("Please make sure to use a valid email.");
+      $("#warning").show();
     };
   });
 
@@ -79,7 +85,7 @@ $(function() {
       $("#result3").show();
     } else {
       resetResults();
-      $(".resultString").text(`Hey ${userName}! You probably shouldn't code`);
+      $(".resultString").text(`Hey ${userName}! You probably shouldn't code!`);
       $("#resultNaN").show();
     };
   });
