@@ -25,11 +25,11 @@
       <div class="row centerButton" id="startQuiz">
         <div class="col-md-12">
           <form>
-            <div class="form-group">
+            <div class="form-group userInput">
               <label for="userNameInput">Name</label>
               <input type="text" class="form-control" id="userName" placeholder="Enter name">
             </div>
-            <div class="form-group">
+            <div class="form-group userInput">
               <label for="userEmailInput">Email address</label>
               <input type="email" class="form-control" id="userEmail" placeholder="Enter email">
             </div>
@@ -150,8 +150,8 @@
 
       <div class="row" id="results">
         <div class="col-md-12">
+          <h1 class="resultString"></h1>
           <div id="resultNaN">
-            <h1>You Probably Shouldn't Code</h1>
             <div class="centerButton">
               <img src="img/angry.jpg">
             </div>
@@ -160,7 +160,6 @@
             </p>
           </div>
           <div id="result1">
-            <h1>You should take the Ruby/Rails track!</h1>
             <div class="centerButton">
               <img src="img/ruby.png">
               <img src="img/rails.png">
@@ -173,7 +172,6 @@
             </div>
           </div>
           <div id="result2">
-            <h1>You should take the Java/Android track!</h1>
             <div class="centerButton">
               <img src="img/java.png">
               <img src="img/android.png">
@@ -186,7 +184,6 @@
             </div>
           </div>
           <div id="result3">
-            <h1>You should take the PHP/Drupal track!</h1>
             <div class="centerButton">
               <img src="img/php.png">
               <img src="img/drupal.png">
@@ -204,6 +201,10 @@
             <button id="overButton" class="btn btn-danger" type="button" name="submit">Try Again!</button>
           </div>
         </div>
+      </div>
+
+      <div class="row" id="warning">
+        <h2>Please make sure all fields are filled out.</h2>
       </div>
     </div>
   </body>

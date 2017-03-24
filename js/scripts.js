@@ -1,6 +1,6 @@
 $(function() {
 
-  var startEndButtons = function(clickedButton, hide1, show1, show2) {
+  var endButton = function(clickedButton, hide1, show1, show2) {
     $(clickedButton).click(function() {
       $("#heading").show();
       $(hide1).hide();
@@ -9,8 +9,7 @@ $(function() {
     });
   };
 
-  startEndButtons("#startButton", "#startQuiz", "#questions", "#question1");
-  startEndButtons("#overButton", "#results", "#questions", "#question1");
+  endButton("#overButton", "#results", "#questions", "#question1");
 
   var nextBackButtons = function(clickedButton, hide, show) {
     $(clickedButton).click(function() {
@@ -41,7 +40,23 @@ $(function() {
     $("#result3").hide();
   };
 
+  $("#startButton").click(function() {
+    var userName = $("#userName").val();
+    var userEmail = $("#userEmail").val();
+
+    if (userName === "" || userEmail === "") {
+      $("#warning").show();
+    } else {
+      $("#warning").hide();
+      $("#heading").show();
+      $("#startQuiz").hide();
+      $("#questions").show();
+      $("#question1").show();
+    };
+  });
+
   $("#submitButton").click(function() {
+    var userName = $("#userName").val();
     var value1 = parseInt($("input[name=question1]:checked").val());
     var value2 = parseInt($("input[name=question2]:checked").val());
     var value3 = parseInt($("input[name=question3]:checked").val());
@@ -52,15 +67,19 @@ $(function() {
 
     if (resultValue > 6) {
       resetResults();
+      $(".resultString").text(`Hey ${userName}! You should take the Ruby/Rails track!`);
       $("#result1").show();
     } else if (resultValue > 3) {
       resetResults();
+      $(".resultString").text(`Hey ${userName}! You should take the Java/Android track!`)
       $("#result2").show();
     } else if (resultValue > 0) {
       resetResults();
+      $(".resultString").text(`Hey ${userName}! You should take the PHP/Drupal track!`);
       $("#result3").show();
     } else {
       resetResults();
+      $(".resultString").text(`Hey ${userName}! You probably shouldn't code`);
       $("#resultNaN").show();
     };
   });
