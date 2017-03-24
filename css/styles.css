@@ -11,6 +11,10 @@ li span {
   margin-left: 10px;
 }
 
+button[type="button"] {
+  font-size: 20px;
+}
+
 .centerButton {
   text-align: center;
 }
