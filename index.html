@@ -24,22 +24,43 @@
 
       <div class="row centerButton" id="startQuiz">
         <div class="col-md-12">
+
           <button id="startButton" class="btn btn-danger" type="button">Click here to start quiz!</button>
         </div>
       </div>
 
       <div class="row" id="questions">
         <div class="col-md-12">
-          <hr>
-
+          
           <div id="question1">
-            <h2>Why do you want to learn to code?</h2>
-            <ul>
-              <li><input type="radio" name="question1" value="3"><span>Be a professional developer</span></input></li>
-              <li><input type="radio" name="question1" value="1"><span>Run a startup</span></input></li>
-              <li><input type="radio" name="question1" value="3"><span>Build something fun</span></input></li>
-              <li><input type="radio" name="question1" value="2"><span>Have another skill</span></input></li>
-            </ul>
+
+            <fieldset class="form-group">
+              <legend><h2>Why do you want to learn to code?</h2></legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question1" value="3">
+                  Be a professional developer
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question1" value="1">
+                  Run a startup
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question1" value="3">
+                  Build something fun
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question1" value="2">
+                  Have another skill
+                </label>
+              </div>
+            </fieldset>
             <hr>
             <div class="centerButton">
               <button id="nextButton1" class="btn btn-success" type="button" name="next">Next</button>
@@ -47,12 +68,27 @@
           </div>
 
           <div id="question2">
-            <h2>What type of companies do you want to work for?</h2>
-            <ul>
-              <li><input type="radio" name="question2" value="3"><span>Small business / Freelance</span></input></li>
-              <li><input type="radio" name="question2" value="1"><span>Startups</span></input></li>
-              <li><input type="radio" name="question2" value="1 "><span>Traditional Enterprise</span></input></li>
-            </ul>
+            <fieldset class="form-group">
+              <legend><h2>What type of companies do you want to work for?</h2></legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question2" value="3">
+                  Small business / Freelance
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question2" value="1">
+                  Startups
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question2" value="1">
+                  Traditional enterprise
+                </label>
+              </div>
+            </fieldset>
             <hr>
             <div class="centerButton">
               <button id="backButton1" class="btn btn-success" type="button" name="submit">Back</button>
@@ -61,14 +97,39 @@
           </div>
 
           <div id="question3">
-            <h2>What kind of developer do you want to be?</h2>
-            <ul>
-              <li><input type="radio" name="question3" value="1"><span>Game</span></input></li>
-              <li><input type="radio" name="question3" value="3"><span>Web</span></input></li>
-              <li><input type="radio" name="question3" value="2"><span>Mobile</span></input></li>
-              <li><input type="radio" name="question3" value="1"><span>Desktop software</span></input></li>
-              <li><input type="radio" name="question3" value="1"><span>Data scientist</span></input></li>
-            </ul>
+            <fieldset class="form-group">
+              <legend><h2>What kind of developer do you want to be?</h2></legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question3" value="3">
+                  Game
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question3" value="1">
+                  Web
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question3" value="1">
+                  Mobile
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question3" value="1">
+                  Desktop software
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="question3" value="1">
+                  Data scientist
+                </label>
+              </div>
+            </fieldset>
             <hr>
             <div class="centerButton">
               <button id="backButton2" class="btn btn-success" type="button" name="submit">Back</button>
