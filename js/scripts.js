@@ -11,17 +11,17 @@ $(function() {
   startEndButtons("#startButton", "#startQuiz", "#questions", "#question1");
   startEndButtons("#overButton", "#results", "#questions", "#question1");
 
-  var nextButtons = function(clickedButton, hide, show) {
+  var nextBackButtons = function(clickedButton, hide, show) {
     $(clickedButton).click(function() {
       $(hide).hide();
       $(show).show();
     });
   };
 
-  nextButtons("#nextButton1", "#question1", "#question2");
-  nextButtons("#nextButton2", "#question2", "#question3");
-  nextButtons("#backButton1", "#question2", "#question1");
-  nextButtons("#backButton2", "#question3", "#question2");
+  nextBackButtons("#nextButton1", "#question1", "#question2");
+  nextBackButtons("#nextButton2", "#question2", "#question3");
+  nextBackButtons("#backButton1", "#question2", "#question1");
+  nextBackButtons("#backButton2", "#question3", "#question2");
 
   var submitButtons = function(clickedButton, hide1, hide2, show1) {
     $(clickedButton).click(function() {
@@ -32,5 +32,34 @@ $(function() {
   };
 
   submitButtons("#submitButton", "#question3", "#questions", "#results");
+
+  var resetResults = function() {
+    $("#resultNaN").hide();
+    $("#result1").hide();
+    $("#result2").hide();
+    $("#result3").hide();
+  };
+
+  $("#submitButton").click(function() {
+    var value1 = parseInt($("input[name=question1]:checked").val());
+    var value2 = parseInt($("input[name=question2]:checked").val());
+    var value3 = parseInt($("input[name=question3]:checked").val());
+
+    var resultValue = value1 + value2 + value3;
+
+    if (resultValue > 6) {
+      resetResults();
+      $("#result1").show();
+    } else if (resultValue > 3) {
+      resetResults();
+      $("#result2").show();
+    } else if (resultValue > 0) {
+      resetResults();
+      $("#result3").show();
+    } else {
+      resetResults();
+      $("#resultNaN").show();
+    };
+  });
 
 });

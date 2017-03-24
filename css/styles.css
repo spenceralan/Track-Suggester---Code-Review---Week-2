@@ -21,6 +21,6 @@ li span {
   display: none;
 }
 
-#results, #result1, #result2, #result3 {
+#results, #resultNaN, #result1, #result2, #result3 {
   display: none;
 }
