@@ -12,6 +12,7 @@ li span {
 }
 
 button[type="button"] {
+  margin-top: 10px;
   font-size: 20px;
 }
 
