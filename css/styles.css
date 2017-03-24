@@ -1,10 +1,10 @@
 #heading {
   text-align: center;
-  border: solid 2px red;
 }
 
 li {
   list-style-type: none;
+  font-size: 18px;
 }
 
 li span {

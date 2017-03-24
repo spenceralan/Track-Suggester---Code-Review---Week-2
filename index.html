@@ -15,16 +15,21 @@
     <div class="container">
       <div class="row" id="heading">
         <h1>What Track Should You Take?</h1>
-        <p>
+        <h3>
           Answer just a few short questions and we will suggest what trick might be the best fit!
-        </p>
+        </h3>
         <p>
           Disclaimer: This quiz is not comprehensive and results can vary. Please consult a professional before making any life changing decisions.
         </p>
+        <hr>
+      </div>
+
+      <div class="startQuiz">
+        <button>Click here to start quiz!</button>
       </div>
 
       <div class="row" id="questions">
-        <hr>
+
         <h2>Question Test</h2>
         <ul>
           <li><input type="radio" name="response" value="1"><span>Test</span></input></li>
@@ -32,7 +37,11 @@
           <li><input type="radio" name="response" value="3"><span>Test</span></input></li>
         </ul>
         <hr>
-        <button class="btn btn-danger">Submit</button>
+        <button id="submitButton" class="btn btn-danger" type="button" name="submit">Submit</button>
+      </div>
+
+      <div class="row" id="results">
+        <h1>You should take the Ruby on Rails track!</h1>
       </div>
     </div>
   </body>
