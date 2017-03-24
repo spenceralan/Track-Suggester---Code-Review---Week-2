@@ -1,4 +1,4 @@
-#heading {
+#heading, #results {
   text-align: center;
 }
 
@@ -18,5 +18,9 @@ li span {
 /*initially hide divs*/
 
 #questions, #question1, #question2, #question3 {
+  display: none;
+}
+
+#results {
   display: none;
 }

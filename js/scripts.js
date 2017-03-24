@@ -1,10 +1,14 @@
 $(function() {
-  $("#questions").hide();
-  $("#results").hide();
-  $("#startQuiz").show();
+
 
   $("#startButton").click(function() {
     $("#startQuiz").hide();
+    $("#questions").show();
+    $("#question1").show();
+  });
+
+  $("#overButton").click(function() {
+    $("#results").hide();
     $("#questions").show();
     $("#question1").show();
   });
@@ -28,5 +32,12 @@ $(function() {
     $("#question3").hide();
     $("#question2").show();
   });
+
+  $("#submitButton").click(function() {
+    $("#question3").hide();
+    $("#questions").hide();
+    $("#results").show();
+  });
+
 
 });
