@@ -1,43 +1,36 @@
 $(function() {
 
+  var startEndButtons = function(clickedButton, hide1, show1, show2) {
+    $(clickedButton).click(function() {
+      $(hide1).hide();
+      $(show1).show();
+      $(show2).show();
+    });
+  };
 
-  $("#startButton").click(function() {
-    $("#startQuiz").hide();
-    $("#questions").show();
-    $("#question1").show();
-  });
+  startEndButtons("#startButton", "#startQuiz", "#questions", "#question1");
+  startEndButtons("#overButton", "#results", "#questions", "#question1");
 
-  $("#overButton").click(function() {
-    $("#results").hide();
-    $("#questions").show();
-    $("#question1").show();
-  });
+  var nextButtons = function(clickedButton, hide, show) {
+    $(clickedButton).click(function() {
+      $(hide).hide();
+      $(show).show();
+    });
+  };
 
-  $("#nextButton1").click(function() {
-    $("#question1").hide();
-    $("#question2").show();
-  });
+  nextButtons("#nextButton1", "#question1", "#question2");
+  nextButtons("#nextButton2", "#question2", "#question3");
+  nextButtons("#backButton1", "#question2", "#question1");
+  nextButtons("#backButton2", "#question3", "#question2");
 
-  $("#nextButton2").click(function() {
-    $("#question2").hide();
-    $("#question3").show();
-  });
+  var submitButtons = function(clickedButton, hide1, hide2, show1) {
+    $(clickedButton).click(function() {
+      $(hide1).hide();
+      $(hide2).hide();
+      $(show1).show();
+    });
+  };
 
-  $("#backButton1").click(function() {
-    $("#question2").hide();
-    $("#question1").show();
-  });
-
-  $("#backButton2").click(function() {
-    $("#question3").hide();
-    $("#question2").show();
-  });
-
-  $("#submitButton").click(function() {
-    $("#question3").hide();
-    $("#questions").hide();
-    $("#results").show();
-  });
-
+  submitButtons("#submitButton", "#question3", "#questions", "#results");
 
 });
