@@ -1,15 +1,16 @@
 $(function() {
 
-  var endButton = function(clickedButton, hide1, show1, show2) {
+  var endButton = function(clickedButton, hide1, hide2, show1, show2) {
     $(clickedButton).click(function() {
       $("#heading").show();
       $(hide1).hide();
+      $(hide2).hide();
       $(show1).show();
       $(show2).show();
     });
   };
 
-  endButton("#overButton", "#results", "#questions", "#question1");
+  endButton("#overButton", "#results", "#question5", "#questions", "#question1");
 
   var nextBackButtons = function(clickedButton, hide, show) {
     $(clickedButton).click(function() {
@@ -20,8 +21,12 @@ $(function() {
 
   nextBackButtons("#nextButton1", "#question1", "#question2");
   nextBackButtons("#nextButton2", "#question2", "#question3");
+  nextBackButtons("#nextButton3", "#question3", "#question4");
+  nextBackButtons("#nextButton4", "#question4", "#question5");
   nextBackButtons("#backButton1", "#question2", "#question1");
   nextBackButtons("#backButton2", "#question3", "#question2");
+  nextBackButtons("#backButton3", "#question4", "#question3");
+  nextBackButtons("#backButton4", "#question5", "#question4");
 
   var submitButtons = function(clickedButton, hide1, hide2, show1) {
     $(clickedButton).click(function() {
@@ -71,11 +76,11 @@ $(function() {
 
     $("#heading").hide();
 
-    if (resultValue > 6) {
+    if (resultValue > 9) {
       resetResults();
       $(".resultString").text(`Hey ${userName}! You should take the Ruby/Rails track!`);
       $("#result1").show();
-    } else if (resultValue > 3) {
+    } else if (resultValue > 5) {
       resetResults();
       $(".resultString").text(`Hey ${userName}! You should take the Java/Android track!`)
       $("#result2").show();
